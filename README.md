@@ -75,3 +75,20 @@ Masalah
 Jika Anda menemui masalah atau memiliki pertanyaan, Anda dapat membuat tiket masalah (issue) di repositori ini.
 
 Terima kasih telah menggunakan API Management Ijazah!
+
+# Nama target pertama akan menjadi target default yang dijalankan saat Anda menjalankan perintah make tanpa argumen.
+# Dalam contoh ini, target default adalah "all".
+all: compile test
+
+# Target "compile" untuk mengkompilasi kode.
+compile:
+    gcc -o my_program main.c
+
+# Target "test" untuk menjalankan pengujian.
+test:
+    ./my_program test_input.txt
+
+# Target "clean" untuk membersihkan file yang dihasilkan.
+clean:
+    rm -f my_program
+
