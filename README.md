@@ -1,4 +1,4 @@
-# Management-Ijazah-Backend
+
 # Dokumentasi API Management Ijazah Backend
 
 Selamat datang di dokumentasi API untuk backend Management Ijazah. Berikut ini adalah penjelasan mengenai API yang dapat diakses serta cara penggunaannya.
@@ -13,8 +13,6 @@ Pastikan Anda memiliki Node.js dan dependensi yang diperlukan diinstal di komput
 
    ```bash
    npm install
-   
-
 Server akan berjalan di port yang telah ditentukan (biasanya port 3001).
 
 ## Endpoint
