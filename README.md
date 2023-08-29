@@ -14,58 +14,53 @@ Pastikan Anda memiliki Node.js dan dependensi yang diperlukan diinstal di komput
    ```bash
    npm install
    
-## Menjalankan Server
-Jalankan server backend dengan menjalankan perintah berikut:
-npm start
 
 Server akan berjalan di port yang telah ditentukan (biasanya port 3001).
 
 ## Endpoint
+
 Berikut adalah daftar endpoint API yang dapat diakses:
 
-PUT /auth/update-profile-image/:id
-Mengganti gambar profil pengguna.
+- **PUT /auth/update-profile-image/:id**
+  Mengganti gambar profil pengguna.
 
-Request:
+  **Request:**
+  - Method: PUT
+  - Parameter URL: `:id` (ID pengguna)
+  - Body: Form data berisi file gambar dengan key `profileImage`
 
-Method: PUT
-Parameter URL: :id (ID pengguna)
-Body: Form data berisi file gambar dengan key profileImage
-Response:
+  **Response:**
+  - Status Code 200: Berhasil mengganti gambar profil
+  - Status Code 500: Error server
 
-Status Code 200: Berhasil mengganti gambar profil
-Status Code 500: Error server
-POST /upload
-Mengunggah file PDF ijazah siswa dan data siswa terkait.
+- **POST /upload**
+  Mengunggah file PDF ijazah siswa dan data siswa terkait.
 
-Request:
+  **Request:**
+  - Method: POST
+  - Body: Form data berisi nama siswa dan NISN dengan key `namaSiswa` dan `nisn`, serta file PDF dengan key `pdfFile`
 
-Method: POST
-Body: Form data berisi nama siswa dan NISN dengan key namaSiswa dan nisn, serta file PDF dengan key pdfFile
-Response:
+  **Response:**
+  - Status Code 200: Berhasil mengunggah file dan data siswa
+  - Status Code 400: Nama siswa dan NISN harus diisi
+  - Status Code 500: Error server
 
-Status Code 200: Berhasil mengunggah file dan data siswa
-Status Code 400: Nama siswa dan NISN harus diisi
-Status Code 500: Error server
-POST /cek-nisn
-Memeriksa apakah NISN sudah terdaftar.
+- **POST /cek-nisn**
+  Memeriksa apakah NISN sudah terdaftar.
 
-Request:
+  **Request:**
+  - Method: POST
+  - Body: JSON berisi NISN dengan key `nisn`
 
-Method: POST
-Body: JSON berisi NISN dengan key nisn
-Response:
+  **Response:**
+  - Status Code 200: Berhasil, respons berisi status apakah NISN sudah terdaftar atau belum
+  - Status Code 400: NISN harus diisi
+  - Status Code 500: Error server
 
-Status Code 200: Berhasil, respons berisi status apakah NISN sudah terdaftar atau belum
-Status Code 400: NISN harus diisi
-Status Code 500: Error server
-... (dan seterusnya)
+...
 
 ## Penggunaan Auth Token
 Beberapa endpoint memerlukan autentikasi menggunakan JWT (JSON Web Token). Setelah Anda berhasil login dan mendapatkan token, sertakan token tersebut pada setiap request dengan menambahkan header Authorization: Bearer <token>.
 Misalnya:
   ```bash
  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
-
-
-
