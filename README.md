@@ -61,17 +61,18 @@ Status Code 400: NISN harus diisi
 Status Code 500: Error server
 ... (dan seterusnya)
 
-Penggunaan Auth Token
+## Penggunaan Auth Token
 Beberapa endpoint memerlukan autentikasi menggunakan JWT (JSON Web Token). Setelah Anda berhasil login dan mendapatkan token, sertakan token tersebut pada setiap request dengan menambahkan header Authorization: Bearer <token>.
-# Misalnya:
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Misalnya:
+ ```bash
+   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 Pastikan untuk mengganti <token> dengan token JWT yang Anda peroleh saat login.
 
-# Kontribusi
+## Kontribusi
 Jika Anda ingin berkontribusi pada proyek ini, silakan fork repositori ini, buat perubahan Anda, dan buat pull request ke repositori utama.
 
-# Masalah
+## Masalah
 Jika Anda menemui masalah atau memiliki pertanyaan, Anda dapat membuat tiket masalah (issue) di repositori ini.
 
 Terima kasih telah menggunakan API Management Ijazah!
