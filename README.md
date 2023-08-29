@@ -14,13 +14,13 @@ Pastikan Anda memiliki Node.js dan dependensi yang diperlukan diinstal di komput
    ```bash
    npm install
    
-Menjalankan Server
+## Menjalankan Server
 Jalankan server backend dengan menjalankan perintah berikut:
 npm start
 
 Server akan berjalan di port yang telah ditentukan (biasanya port 3001).
 
-Endpoint
+## Endpoint
 Berikut adalah daftar endpoint API yang dapat diakses:
 
 PUT /auth/update-profile-image/:id
@@ -36,7 +36,7 @@ Response:
 Status Code 200: Berhasil mengganti gambar profil
 Status Code 500: Error server
 POST /upload
-Mengunggah file PDF ijasah siswa dan data siswa terkait.
+Mengunggah file PDF ijazah siswa dan data siswa terkait.
 
 Request:
 
@@ -59,33 +59,10 @@ Response:
 Status Code 200: Berhasil, respons berisi status apakah NISN sudah terdaftar atau belum
 Status Code 400: NISN harus diisi
 Status Code 500: Error server
-POST /login
-Melakukan proses login pengguna.
-
-Request:
-
-Method: POST
-Body: JSON berisi username dan password dengan key username dan password
-Response:
-
-Status Code 200: Berhasil login, respons berisi token JWT
-Status Code 401: Gagal login
-Status Code 500: Error server
-GET /auth
-Mendapatkan informasi pengguna yang telah login.
-
-Request:
-
-Method: GET
-Response:
-
-Status Code 200: Berhasil mendapatkan informasi pengguna
-Status Code 500: Error server
 ... (dan seterusnya)
 
 Penggunaan Auth Token
-Beberapa endpoint memerlukan autentikasi dengan menggunakan JWT (JSON Web Token). Setelah Anda berhasil login dan mendapatkan token, Anda perlu menyertakan token tersebut pada setiap request dengan cara menambahkan header Authorization: Bearer <token>.
-
+Beberapa endpoint memerlukan autentikasi menggunakan JWT (JSON Web Token). Setelah Anda berhasil login dan mendapatkan token, sertakan token tersebut pada setiap request dengan menambahkan header Authorization: Bearer <token>.
 Misalnya:
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
