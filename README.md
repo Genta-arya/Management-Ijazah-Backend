@@ -63,32 +63,17 @@ Status Code 500: Error server
 
 Penggunaan Auth Token
 Beberapa endpoint memerlukan autentikasi menggunakan JWT (JSON Web Token). Setelah Anda berhasil login dan mendapatkan token, sertakan token tersebut pada setiap request dengan menambahkan header Authorization: Bearer <token>.
-Misalnya:
+# Misalnya:
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 Pastikan untuk mengganti <token> dengan token JWT yang Anda peroleh saat login.
 
-Kontribusi
+# Kontribusi
 Jika Anda ingin berkontribusi pada proyek ini, silakan fork repositori ini, buat perubahan Anda, dan buat pull request ke repositori utama.
 
-Masalah
+# Masalah
 Jika Anda menemui masalah atau memiliki pertanyaan, Anda dapat membuat tiket masalah (issue) di repositori ini.
 
 Terima kasih telah menggunakan API Management Ijazah!
 
-# Nama target pertama akan menjadi target default yang dijalankan saat Anda menjalankan perintah make tanpa argumen.
-# Dalam contoh ini, target default adalah "all".
-all: compile test
-
-# Target "compile" untuk mengkompilasi kode.
-compile:
-    gcc -o my_program main.c
-
-# Target "test" untuk menjalankan pengujian.
-test:
-    ./my_program test_input.txt
-
-# Target "clean" untuk membersihkan file yang dihasilkan.
-clean:
-    rm -f my_program
 
